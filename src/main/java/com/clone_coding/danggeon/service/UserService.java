@@ -87,6 +87,7 @@ public class UserService {
 
         //회원 정보 불러오기
         User userByEmail = userRepository.findByEmail(passwordFindingDto.getEmail());
+        System.out.println(userByEmail.getUsername()+ " " + userByEmail.getEmail());
 
         //가입된 이메일이 존재한다면 이메일 발송
         if (userByEmail != null) {

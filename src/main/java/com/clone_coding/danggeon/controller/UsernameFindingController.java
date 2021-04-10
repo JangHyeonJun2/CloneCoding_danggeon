@@ -2,7 +2,7 @@ package com.clone_coding.danggeon.controller;
 
 import com.clone_coding.danggeon.dto.PasswordFindingDto;
 import com.clone_coding.danggeon.dto.UsernameFindingDto;
-import com.clone_coding.danggeon.handler.CustomMessageResponse;
+import com.clone_coding.danggeon.error.CustomMessageResponse;
 import com.clone_coding.danggeon.models.User;
 import com.clone_coding.danggeon.service.UserService;
 import org.springframework.http.HttpStatus;
@@ -27,32 +27,24 @@ public class UsernameFindingController {
     }
 
     @PostMapping("/api/usernamefind")
-    public Object findUsername(@Valid @RequestBody UsernameFindingDto usernameFindingDto, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            List<ObjectError> allErrors = bindingResult.getAllErrors();
-            String errorMessage = allErrors.get(0).getDefaultMessage();
-            HttpStatus status = HttpStatus.BAD_REQUEST;
-            CustomMessageResponse errors = new CustomMessageResponse(errorMessage,status.value());
-            return ResponseEntity
-                    .status(status)
-                    .body(errors);
-        }
+    public Object findUsername(@Valid @RequestBody UsernameFindingDto usernameFindingDto) {
+//        if (bindingResult.hasErrors()) {
+//            List<ObjectError> allErrors = bindingResult.getAllErrors();
+//            String errorMessage = allErrors.get(0).getDefaultMessage();
+//            HttpStatus status = HttpStatus.BAD_REQUEST;
+//            CustomMessageResponse errors = new CustomMessageResponse(errorMessage,status.value());
+//            return ResponseEntity
+//                    .status(status)
+//                    .body(errors);
+//        }
         User userByEmail = userService.findByEmail(usernameFindingDto.getEmail());
         return userByEmail.getUsername();
 
     }
 
     @PostMapping("/api/passwordfind")
-    public Object findPassword(@Valid @RequestBody PasswordFindingDto passwordFindingDto, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            List<ObjectError> allErrors = bindingResult.getAllErrors();
-            String errorMessage = allErrors.get(0).getDefaultMessage();
-            HttpStatus status = HttpStatus.BAD_REQUEST;
-            CustomMessageResponse errors = new CustomMessageResponse(errorMessage,status.value());
-            return ResponseEntity
-                    .status(status)
-                    .body(errors);
-        }
+    public Object findPassword(@Valid @RequestBody PasswordFindingDto passwordFindingDto) {
+
         return userService.findPw(passwordFindingDto);
     }
 }
