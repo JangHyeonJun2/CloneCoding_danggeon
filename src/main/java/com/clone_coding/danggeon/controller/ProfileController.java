@@ -1,23 +1,16 @@
 package com.clone_coding.danggeon.controller;
 
 import com.clone_coding.danggeon.dto.UserProfileUpdateDto;
-import com.clone_coding.danggeon.error.CustomMessageResponse;
 import com.clone_coding.danggeon.models.User;
 import com.clone_coding.danggeon.service.S3Service;
 import com.clone_coding.danggeon.service.UserImageService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
-import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
