@@ -97,6 +97,13 @@
 ```
 
 
+## 개발환경
+
+- Java: JDK 1.8.0
+- IDE: IntelliJ IDEA 2020.3.3 x64
+- Build Management: Gradle
+- Framework: SpringBoot
+
 
 
 
