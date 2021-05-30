@@ -13,7 +13,7 @@
 </p>
 
 
-## 소개
+## 📌소개
 
 - 당근마켓을 벤치마킹하여 클론코딩을 진행했습니다.
 - 게시글 데이터는 크롤링으로 당근마켓에서 가져오고 있습니다.
@@ -103,6 +103,9 @@
 - IDE: IntelliJ IDEA 2020.3.3 x64
 - Build Management: Gradle
 - Framework: SpringBoot
+
+## 📌[기술 및 논의 정리 - WIKI](https://github.com/JangHyeonJun2/CloneCoding_danggeon/wiki)
+
 
 
 
