@@ -12,6 +12,7 @@
   <img src="https://img.shields.io/badge/Selenium-orenge?style=flat-square&logo=Selenium&logoColor=white"/>
 </p>
 
+
 ## 소개
 
 - 당근마켓을 벤치마킹하여 클론코딩을 진행했습니다.
@@ -21,52 +22,81 @@
 
 ## 영상
 
-[작동영상]: https://hanghae99.spartacodingclub.kr/exhibitions/clone .
+[작동영상]: https://hanghae99.spartacodingclub.kr/exhibitions/clone	"실행영상"
 
-main
-java
-com.clone.daangnclone
-│  │  
-├─ config
-│  └─ SecurityConfig.java
-│  │  
-├─ controller
-│  └─ AuthController.java
-│  └─ ProductController.java
-│  └─ UserController.java
-│  │  
-├─ dto
-│  └─ LoginDto.java
-│  └─ ProductRequestDto.java
-│  └─ TokenDto.java
-│  └─ UserDto.java
-│  │  
-├─ entity
-│  └─ Authority.java
-│  └─ Product.java
-│  └─ User.java
-│  │  
-├─ jwt
-│  └─ JwtAccessDeniedHandler.java
-│  └─ JwtAuthenticationEntryPoint.java
-│  └─ JwtFilter.java
-│  └─ JwtSecurityCongif.java
-│  └─ TokenProvider.java
-│  │  
-├─ repository
-│  └─ AuthorityRepository.java
-│  └─ ProductRepository.java
-│  └─ UserRepository.java
-│  │ 
-├─ service
-│  └─ CustomUserDetailsService.java
-│  └─ ProductService.java
-│  └─ UserService.java
-│  │ 
-├─ util
-│  └─ SecurityUtil.java
-│  │ 
-└─  DanngnCloneApplication
+
+
+##디렉토리 구조
+
+```tree
+├── build
+│   ├── bootJarMainClassName
+│   ├── classes
+│   │   └── java
+│   │       ├── main
+│   │       │   └── com
+│   │       │       └── clone_coding
+│   │       │           └── danggeon
+│   │       │               ├── DanggeonApplication.class
+│   │       │               ├── bcrypt
+│   │       │               │   ├── BcryptImpl.class
+│   │       │               │   └── EncryptHelper.class
+│   │       │               ├── config
+│   │       │               │   ├── AuthorizationExtractor.class
+│   │       │               │   ├── BearerAuthInterceptor.class
+│   │       │               │   ├── WebMVCConfig.class
+│   │       │               │   └── WebSocketConfig.class
+│   │       │               ├── controller
+│   │       │               │   ├── BoardsController.class
+│   │       │               │   ├── ChatsController.class
+│   │       │               │   ├── ProfileController.class
+│   │       │               │   ├── UserLoginController.class
+│   │       │               │   ├── UserSignupController.class
+│   │       │               │   └── UsernameFindingController.class
+│   │       │               ├── dto
+│   │       │               │   ├── BoardsRequestDto.class
+│   │       │               │   ├── PasswordFindingDto.class
+│   │       │               │   ├── UserCheckNameDto.class
+│   │       │               │   ├── UserLoginRequestDto.class
+│   │       │               │   ├── UserProfileUpdateDto.class
+│   │       │               │   ├── UserSignupRequestDto.class
+│   │       │               │   └── UsernameFindingDto.class
+│   │       │               ├── handler
+│   │       │               │   ├── CreateError.class
+│   │       │               │   ├── CustomMessageResponse.class
+│   │       │               │   ├── JwtTokenProvider.class
+│   │       │               │   └── SocketHandler.class
+│   │       │               ├── models
+│   │       │               │   ├── Boards.class
+│   │       │               │   ├── Timestamped.class
+│   │       │               │   └── User.class
+│   │       │               ├── repository
+│   │       │               │   ├── BoardsRepository.class
+│   │       │               │   └── UserRepository.class
+│   │       │               ├── response
+│   │       │               │   └── TokenResponse.class
+│   │       │               ├── service
+│   │       │               │   ├── BoardsService.class
+│   │       │               │   ├── S3Service.class
+│   │       │               │   ├── UserImageService.class
+│   │       │               │   └── UserService.class
+│   │       │               └── utils
+│   │       │                   ├── CORSFilter.class
+│   │       │                   ├── GetBoards.class
+│   │       │                   └── MailUtil.class
+│   │       └── test
+│   │           └── com
+│   │               └── clone_coding
+│   │                   └── danggeon
+│   │                       ├── DanggeonApplicationTests.class
+│   │                       ├── controller
+│   │                       │   └── UserLoginControllerTest.class
+│   │                       └── service
+│   │                           └── UserServiceTest.class
+
+```
+
+
 
 
 
