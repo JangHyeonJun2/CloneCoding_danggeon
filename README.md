@@ -23,6 +23,52 @@
 
 [작동영상]: https://hanghae99.spartacodingclub.kr/exhibitions/clone .
 
+main
+java
+com.clone.daangnclone
+│  │  
+├─ config
+│  └─ SecurityConfig.java
+│  │  
+├─ controller
+│  └─ AuthController.java
+│  └─ ProductController.java
+│  └─ UserController.java
+│  │  
+├─ dto
+│  └─ LoginDto.java
+│  └─ ProductRequestDto.java
+│  └─ TokenDto.java
+│  └─ UserDto.java
+│  │  
+├─ entity
+│  └─ Authority.java
+│  └─ Product.java
+│  └─ User.java
+│  │  
+├─ jwt
+│  └─ JwtAccessDeniedHandler.java
+│  └─ JwtAuthenticationEntryPoint.java
+│  └─ JwtFilter.java
+│  └─ JwtSecurityCongif.java
+│  └─ TokenProvider.java
+│  │  
+├─ repository
+│  └─ AuthorityRepository.java
+│  └─ ProductRepository.java
+│  └─ UserRepository.java
+│  │ 
+├─ service
+│  └─ CustomUserDetailsService.java
+│  └─ ProductService.java
+│  └─ UserService.java
+│  │ 
+├─ util
+│  └─ SecurityUtil.java
+│  │ 
+└─  DanngnCloneApplication
+
+
 
 
 
