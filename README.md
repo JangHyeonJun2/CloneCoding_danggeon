@@ -22,7 +22,7 @@
 
 ## 영상
 
-[작동영상]: https://hanghae99.spartacodingclub.kr/exhibitions/clone	"실행영상"
+[작동영상]: https://hanghae99.spartacodingclub.kr/exhibitions/clone	15
 
 
 
