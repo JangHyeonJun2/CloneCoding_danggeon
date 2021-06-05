@@ -22,7 +22,7 @@
 
 ## 영상
 
-[작동영상]: https://hanghae99.spartacodingclub.kr/exhibitions/clone	15조 
+[작동영상](https://www.youtube.com/watch?v=sBLoFiOKxzo)
 
 
 
